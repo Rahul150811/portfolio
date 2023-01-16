@@ -22,6 +22,40 @@ html{
     background: #555;
 }
 
+video{
+  position:relative;
+  display:block;
+  width:100%; 
+}
+.float-right{
+  position:absolute;
+  top: 0px;
+  left: 500px;
+  color: orange;
+  font-weight: 800;
+  border: solid 2px rgb(23, 244, 89);
+  padding: 1px 5px 10px 10px;
+}
+
+a{
+  top:150px;
+  left:150px;
+}
+
+.box{border: dotted 5px rgb(250, 77, 9); margin: 20%;
+  bottom: auto;
+  margin-bottom: auto;
+}
+
+#footer1{
+  color: orange;
+  text-align: center;
+}
+
+#footer2{
+  color:gold;
+  text-align: center;
+}
 @media (max-width: 1104px) {
   .intro1{
     font-size:12px;
@@ -122,23 +156,42 @@ html{
   .intro1{
     font-size: 26px;
     margin-left: 20px;
-    margin-top: 180px;
+    margin-top: 140px;
     color: rgb(24, 120, 231);;
     font-weight: 600;
   }
   
   .text{
     font-size:70px;
-    margin-top:10px;
+    margin-top:5px;
     color: red;;
     font-weight: 600;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
   }
+  .float-right{
+    position:absolute;
+    margin-top: 600px;
+  
+  }
+  .float-right{
+    position:absolute;
+    top: 0px;
+    left: 500px;
+    color: orange;
+    font-weight: 800;
+    border: solid 2px rgb(23, 244, 89);
+    padding: 1px 5px 10px 10px
+  }
+  #resume{
+    margin-left: 90px;  
+    background-color: crimson;
+    border-color: green;
+    border-radius: 10px;
+  }
 }
   @media screen and (max-width:600px){
-
     .intro1{
       font-size:12px;
       margin-top: 50px;
@@ -148,47 +201,85 @@ html{
     }
 
     .text{
-    font-size:35px;
-    margin-top:10px;
-    color: red;;
-    font-weight: 600;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-  }
+      font-size:35px;
+      margin-top:10px;
+      color: red;;
+      font-weight: 600;
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Ubuntu', sans-serif;
+    }
+  
+    #resume{
+      margin-left: 90px;  
+      background-color: crimson;
+      border-color: green;
+      border-radius: 10px;
+    }
 }
+
+@media screen and (max-width:300px){
+
+  .intro1{
+    font-size:12px;
+    margin-top: 70px;
+    margin-left: 10px;
+    color: rgb(24, 120, 231);;
+    font-weight: 600;
+  }
+
+  .text{
+  font-size:35px;
+  margin-top:10px;
+  color: red;;
+  font-weight: 600;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+}
+
+@media screen and (max-width:100px){
+
+  .intro1{
+    font-size:12px;
+    margin-top: 70px;
+    margin-left: 10px;
+    color: rgb(24, 120, 231);;
+    font-weight: 600;
+  }
+
+  .text{
+  font-size:35px;
+  margin-top:10px;
+  color: red;;
+  font-weight: 600;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+}
+
   #image{
     margin-top: 50px;
   }
-
-  p{
-    background:black;
-    color:white;
-    font-family: 'Rubik', sans-serif;
-  }
-
   .random{
     font-size:50px;
+    background-color: black;
+    color: white;
     display:block;
     text-align:center;
     line-height:100px;
     height:100px;
     margin-top:40vh;
     text-transform:uppercase;
-    letter-spacing:4px
+    letter-spacing:4px;
   }
-/*
-.button{
-    margin-left: 40px;
-    border-radius: 75%;
-    box-shadow: 5px 4px 6px red;
-    box-sizing: content-box;
-}
 
-.intro{
-    background-color: yellow;
-    border-radius: 75%;
-    box-shadow: 5px 4px 6px red;
-    box-sizing: content-box;
+
+#resume{
+  margin-left: 90px;  
+  background-color: crimson;
+  border-color: green;
+  border-radius: 10px;
 }
-*/
