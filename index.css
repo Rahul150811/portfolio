@@ -338,6 +338,8 @@ h2{
   background-color: black; 
   font-family: monospace;
   top: 20px;
+  box-shadow: 1px 2px 3px 4px #006eff;
+  border-radius: 10px;
 }
 
 .card-title {
@@ -346,20 +348,24 @@ h2{
 }
 .card-body{
   background-color: black;
-  border-radius: 20px;
   box-shadow: 1px 2px 3px 4px #00ff00;
+  border-radius: 20px;
 
 }
 
 .card-body li{
-  color: rgb(16, 235, 202); 
-  background-color:;
+  color: rgb(16, 235, 202);
+  
 }
 
 .card-footer {
   background-color: #232323; 
+  
 }
-
+.card-img-top{
+  background-color: grey;
+  border-radius: 10px;
+}
 .btn-primary {
   background-color: #9d9d9d; 
   color: #232323; 
