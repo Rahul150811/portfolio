@@ -195,38 +195,6 @@ h2{
     
 }
 
-/*
-.social{
-  background-color: whitesmoke;
-  width: 100%;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.social a {
-  display:inline-block;
-  color: black;
-  font-size: 18px;
-  text-align: center;
-  padding: 10px 30px;
-  text-decoration: none
-}
-
-.social a:hover {
-  color: green;
-}
-
-#footer1{
-  color: orange;
-  text-align: center;
-}
-  
-#footer2{
-  color:gold;
-  text-align: center;
-}
-*/
-
 .footer {
   background-color: black; /* dark background color */
   color: #9d9d9d; /* light text color */
