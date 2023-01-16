@@ -22,16 +22,15 @@
 <body>
 
   <div class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">About Me</a></li>
-      <li><a href="#about">Education</a></li>
-      <li><a href="#about">Skills</a></li>
-      <li><a href="#about">Projects</a></li>
-      <li><a href="#about">Accomplishment</a></li>
-      <li><a href="#about">Future Goals</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Accomplishments</a>
+    <a href="#">Contact</a>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
   </div>
 
 
@@ -65,14 +64,18 @@
         <p class="random" style="font-size:3vw;">I am a cybersecurity student</p>
       </div>
   </div>
-
-  <section class="banner embed-responsive-item">
-    <video class="bg-video" autoplay="" loop="">
-        <source src="vid.mp4" type="video/mp4">
+<!---video education Section-->
+  <div class="video-section">
+    <video id="bg-video" autoplay loop>
+      <source src="vid.mp4" type="video/mp4">
     </video>
-    <h2 class="float-right">Educational Journey</h2><br> 
-</section>
-<!--- card template
+    <div class="overlay">
+      <h1>Overlay Text</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus non metus scelerisque dapibus. Sed non risus euismod, feugiat velit eu, tincidunt velit. Nam quis varius velit.</p>
+    </div>
+  </div>
+
+<!--skills card section-->
 <div class="card text-center">
   <div class="card-header">
     <h4 class="card-title">Welcome to the Matrix</h4>
@@ -85,12 +88,12 @@
   </div>
 </div>
 
--->
+
 <div class="container">
   <div class="row">
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="image1.jpg" alt="Card image">
+        <img class="card-img-top" src="https://imgs.search.brave.com/RS_7eVNPcDjE5buSMuuoqkVNiLajZ5cp4MDtv0Ve4c8/rs:fit:429:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/QUsxSzNrV3dBQVVS/UWlSU1dfZ1NnSGFJ/TCZwaWQ9QXBp" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">Card 1</h4>
           <p class="card-text">Some text about card 1</p>
@@ -118,9 +121,28 @@
         </div>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="image3.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Card 3</h4>
+          <p class="card-text">Some text about card 3</p>
+          <a href="#" class="btn btn-primary">More Info</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="image3.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Card 3</h4>
+          <p class="card-text">Some text about card 3</p>
+          <a href="#" class="btn btn-primary">More Info</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 
 
 
@@ -131,13 +153,13 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">
-      <p>Copyright ©2022 Your Company</p>
+      <p>Copyright ©2022 Fnu Rahul</p>
     </div>
     <div class="footer-center">
       <p>Contact Us</p>
       <ul>
-        <li>Email: contact@yourcompany.com</li>
-        <li>Phone: 555-555-5555</li>
+        <li>Email: fnu.rahul25@student.qcc.cuny.edu</li>
+        <li>Phone: +1 (929)261-8435</li>
       </ul>
     </div>
     <div class="footer-right">
@@ -166,5 +188,6 @@
   </footer>
 -->
   <script src="animation.js"></script>
+  <script src="menu.js"></script>
 </body>
 </html>

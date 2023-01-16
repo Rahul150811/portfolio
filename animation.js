@@ -86,4 +86,3 @@ function rand(min, max) {
  }
  
  word.addEventListener("mouseenter", init);
- 
