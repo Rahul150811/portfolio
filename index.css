@@ -21,43 +21,243 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+/*
+h1{
+    font-size: 24px;
+  }
+  
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+    }
+}
 
-.breadcrumb{
-  padding:8px 15px;
-  margin-bottom:20px;
-  border-radius:0;
+body {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+@media (min-width: 800px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  */
+/*Default layout for all the screens*/
+#image{
+    margin-top: 50px;
+    width:80%;
 }
-.breadcrumb>li{
-  font-size: 20px;
-  font-weight: 100%;
-  display:inline-block;
-  margin: 10px;
+
+.random{
+    font-size:50px;
+    background-color: black;
+    color: white;
+    display:block;
+    text-align:center;
+    line-height:100px;
+    height:100px;
+    margin-top:40vh;
+    text-transform:uppercase;
+    letter-spacing:4px;
 }
-.breadcrumb>li+li:before{
-  content:"|\00a0";
-  padding:0 40px;
-  color:rgb(238, 94, 16)
+
+.intro1{
+    font-size: 26px;
+    margin-left: 20px;
+    margin-top: 140px;
+    color: rgb(24, 120, 231);;
+    font-weight: 600;
 }
-.breadcrumb a {
-  display:inline-block;
-  color: rgb(13, 234, 39);
+
+h2{
+  width: 350px;
 }
-.breadcrumb>.active{
-  color:#090
+
+.text{
+    font-size:70px;
+    margin-top:5px;
+    color: red;;
+    font-weight: 600;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
 }
+.float-right{
+    position:absolute;
+    margin-top: 600px;
+  
+}
+.float-right{
+    position:absolute;
+    top: 80px;
+    left: 500px;
+    color: orange;
+    font-weight: 800;
+    border: solid 2px rgb(23, 244, 89);
+    padding: 1px 5px 10px 10px
+}
+#resume{
+    margin-left: 90px;  
+    background-color: crimson;
+    border-color: green;
+    border-radius: 10px;
+}
+/*Change the layout if screen size is bigger than 601*/
+@media screen and (min-width:801px){
+    .intro1{
+        font-size: 26px;
+        margin-left: 20px;
+        margin-top: 140px;
+        color: rgb(24, 120, 231);;
+        font-weight: 600;
+    }
+
+    h2{
+      width: 350px;
+    }
+    
+    .text{
+        font-size:70px;
+        margin-top:5px;
+        color: red;;
+        font-weight: 600;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .float-right{
+        position:absolute;
+        margin-top: 600px;
+    }
+    
+    .float-right{
+        position:absolute;
+        top: 110px;
+        left: 450px;
+        color: orange;
+        font-weight: 800;
+        border: solid 2px rgb(23, 244, 89);
+        padding: 1px 5px 10px 10px
+    }
+    
+    #resume{
+        margin-left: 90px;  
+        background-color: crimson;
+        border-color: green;
+        border-radius: 10px;
+    }
+
+    #image{
+        margin-top: 50px;
+    }
+    
+    .random{
+        font-size:50px;
+        background-color: black;
+        color: white;
+        display:block;
+        text-align:center;
+        line-height:100px;
+        height:100px;
+        margin-top:40vh;
+        text-transform:uppercase;
+        letter-spacing:4px;
+    }
+}
+  /*layout change if size is 600 or less*/
+@media screen and (max-width:600px){
+    .intro1{
+        font-size:22px;
+        margin-top: 50px;
+        margin-left: 120px;
+        color: rgb(24, 120, 231);;
+        font-weight: 600;
+    }
+
+    .text{
+        font-size:45px;
+        margin-top:10px;
+        margin-left:125px;
+        color: red;;
+        font-weight: 600;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .float-right{
+        position:absolute;
+        margin-top: 600px;
+    }
+    
+    .float-right{
+        position:absolute;
+        top: 80px;
+        left: 500px;
+        color: orange;
+        font-weight: 800;
+        border: solid 2px rgb(23, 244, 89);
+        padding: 1px 5px 10px 10px
+    }
+
+    #resume{
+        margin-left: 180px;
+        margin-top: 30px;
+        font-size: 15px;
+        background-color: crimson;
+        border-color: green;
+        border-radius: 10px;
+    }
+
+    .random{
+      font-size:50px;
+      background-color: black;
+      color: white;
+      display:block;
+      text-align:center;
+      line-height:75px;
+      height:70px;
+      margin-top:40px;
+      text-transform:uppercase;
+      letter-spacing:4px;
+    }
+    
+    #image{
+      margin-top: 50px;
+      width: 100%;
+      height: 250px;
+    }
+
+    video{
+      margin-top: -3%;
+      position:relative;
+      display:block;
+      width:100%; 
+      height: 500%;
+    }
+
+    .bg-video{
+      min-width: 100%;
+      min-height: 100%;
+    }
+    
+}
+
+
+
 video{
   position:relative;
   display:block;
   width:100%; 
 }
+
 .float-right{
-  position:absolute;
-  top: 80px;
-  left: 500px;
-  color: orange;
-  font-weight: 800;
-  border: solid 2px rgb(23, 244, 89);
-  padding: 1px 5px 10px 10px;
+    position:absolute;
+    top: 110px;
+    left: 450px;
+    color: orange;
+    font-weight: 800;
+    border: solid 2px rgb(23, 244, 89);
+    padding: 1px 5px 10px 10px;
 }
 
 a{
@@ -71,12 +271,14 @@ a{
   bottom: auto;
   margin-bottom: auto;
 }
+/*
 .social{
   background-color: whitesmoke;
   width: 100%;
   font-size: 1.5em;
   text-align: center;
 }
+
 .social a {
   display:inline-block;
   color: black;
@@ -85,242 +287,138 @@ a{
   padding: 10px 30px;
   text-decoration: none
 }
+
 .social a:hover {
   color: green;
 }
+
 #footer1{
   color: orange;
   text-align: center;
 }
-
+  
 #footer2{
   color:gold;
   text-align: center;
 }
-@media (max-width: 1104px) {
-  .intro1{
-    font-size:12px;
-    margin-top: 50px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
+*/
 
-  .text{
-  font-size:35px;
-  margin-top:30px;
-  color: red;;
-  font-weight: 600;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
+.footer {
+  background-color: black; /* dark background color */
+  color: #9d9d9d; /* light text color */
+  font-family: monospace; /* hacker-style font */
+  padding: 20px 0;
 }
-}
-@media (max-width: 991px) {
-  .intro1{
-    font-size:12px;
-    margin-top: 50px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
 
-  .text{
-  font-size:35px;
-  margin-top:10px;
-  color: red;;
-  font-weight: 600;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* align center */
 }
-}
-@media (max-width: 947px){
-  .intro1{
-    font-size:12px;
-    margin-top: 50px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
 
-  .text{
-  font-size:35px;
-  margin-top:10px;
-  color: red;;
-  font-weight: 600;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
+.footer-left, .footer-center, .footer-right {
+  width: 100%;
+  text-align: center;
 }
-}
-@media (max-width: 690px) {
-  .intro1{
-    font-size:12px;
-    margin-top: 50px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
 
-  .text{
-  font-size:35px;
-  margin-top:10px;
-  color: red;;
-  font-weight: 600;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
+.footer-center ul {
+  list-style-type: none;
 }
-}
-@media (max-width: 500px) {
-  .intro1{
-    font-size:12px;
-    margin-top: 50px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
 
-  .text{
-    font-size:35px;
-    margin-top:10px;
-    color: red;;
-    font-weight: 600;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-  } 
+.footer-right ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* align center */
 }
-@media screen and (min-width:601px){
 
-  .intro1{
-    font-size: 26px;
-    margin-left: 20px;
-    margin-top: 140px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
+.footer-right li {
+  margin: 0 10px; /* add some space between links */
+}
+
+.footer a {
+  color: #9d9d9d; /* light text color */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff; /* change text color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-wrap: wrap;
   }
-  
-  .text{
-    font-size:70px;
-    margin-top:5px;
-    color: red;;
-    font-weight: 600;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-  }
-  .float-right{
-    position:absolute;
-    margin-top: 600px;
-  
-  }
-  .float-right{
-    position:absolute;
-    top: 80px;
-    left: 500px;
-    color: orange;
-    font-weight: 800;
-    border: solid 2px rgb(23, 244, 89);
-    padding: 1px 5px 10px 10px
-  }
-  #resume{
-    margin-left: 90px;  
-    background-color: crimson;
-    border-color: green;
-    border-radius: 10px;
+  .footer-left, .footer-center, .footer-right {
+    width: 100%;
   }
 }
-  @media screen and (max-width:600px){
-    .intro1{
-      font-size:12px;
-      margin-top: 50px;
-      margin-left: 10px;
-      color: rgb(24, 120, 231);;
-      font-weight: 600;
-    }
-
-    .text{
-      font-size:35px;
-      margin-top:10px;
-      color: red;;
-      font-weight: 600;
-      background-size: cover;
-      background-attachment: fixed;
-      font-family: 'Ubuntu', sans-serif;
-    }
-  
-    #resume{
-      margin-left: 90px;  
-      background-color: crimson;
-      border-color: green;
-      border-radius: 10px;
-    }
+.navbar {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  padding: 10px;
 }
 
-@media screen and (max-width:300px){
-
-  .intro1{
-    font-size:12px;
-    margin-top: 70px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
-
-  .text{
-  font-size:35px;
-  margin-top:10px;
-  color: red;;
-  font-weight: 600;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
+.navbar a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-left:10px;
+  padding: 30px;
 }
 
-@media screen and (max-width:100px){
-
-  .intro1{
-    font-size:12px;
-    margin-top: 70px;
-    margin-left: 10px;
-    color: rgb(24, 120, 231);;
-    font-weight: 600;
-  }
-
-  .text{
-  font-size:35px;
-  margin-top:10px;
-  color: red;;
-  font-weight: 600;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
+.navbar a:hover {
+  background-color: #00ff00; /* change this color as you like */
+  color: black;
 }
 
-  #image{
-    margin-top: 50px;
-  }
-  .random{
-    font-size:50px;
-    background-color: black;
-    color: white;
-    display:block;
-    text-align:center;
-    line-height:100px;
-    height:100px;
-    margin-top:40vh;
-    text-transform:uppercase;
-    letter-spacing:4px;
-  }
+.navbar ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  overflow: hidden;
+}
 
+.navbar li {
+  float: left;
+}
+/*
+.card {
+  background-color: #232323; 
+  color: #9d9d9d; 
+  font-family: monospace; 
+}
 
-#resume{
-  margin-left: 90px;  
-  background-color: crimson;
-  border-color: green;
-  border-radius: 10px;
+.card-title {
+  color: #fff; 
+}
+
+.card-text {
+  color: #9d9d9d; 
+}
+
+.card-footer {
+  background-color: #232323; 
+}
+
+.btn-primary {
+  background-color: #9d9d9d; 
+  color: #232323; 
+  border: none;
+  font-family: monospace; 
+}
+
+.btn-primary:hover {
+  background-color: #fff; 
+  color: #232323; 
+}
+*/
+.card {
+  background-color: #232323; /* dark background color */
+  color: #9d9d9d; /* light text color */
+  font-family: monospace; /* hacker-style font */
+}
+
+.card-title {
+  text-align: center;
 }

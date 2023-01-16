@@ -21,22 +21,19 @@
 
 <body>
 
-  <nav>
-    <div class="container" style="width:100%;">
-      <div class="bs-component">
-        <div class="active">
-          <ul class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>  
-      </div>
-    </div>
-  </nav>
+  <div class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">About Me</a></li>
+      <li><a href="#about">Education</a></li>
+      <li><a href="#about">Skills</a></li>
+      <li><a href="#about">Projects</a></li>
+      <li><a href="#about">Accomplishment</a></li>
+      <li><a href="#about">Future Goals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
 
 <!--
     <div class="alert alert-success">
@@ -57,36 +54,104 @@
   <div class="container">
       <div class="row">
         <div class="col">
-          <img id="image" class="mx-auto d-block" src="https://img.freepik.com/free-vector/programmers-day-banner-design_1308-113288.jpg?w=996&t=st=1673579338~exp=1673579938~hmac=c0f2c080a5b6b11d4554d9dd34e24d484e4ec48eef7c879f6d0a09096d9bc708" class="rounded-circle" style="width:80%">  
+          <img id="image" class="mx-auto d-block" src="https://img.freepik.com/free-vector/programmers-day-banner-design_1308-113288.jpg?w=996&t=st=1673579338~exp=1673579938~hmac=c0f2c080a5b6b11d4554d9dd34e24d484e4ec48eef7c879f6d0a09096d9bc708" class="rounded-circle">  
         </div>
         <div class="col">
           <div class="intro1">Hello there, my name is</div>
-            <div><h2 class="text" style="width:350px">Fnu Rahul</h2>
+            <div><h2 class="text">Fnu Rahul</h2>
               <a class="btn btn-primary btn-lg" id="resume" href="#" role="button" type="button">Resume</a>
             </div>
         </div>
         <p class="random" style="font-size:3vw;">I am a cybersecurity student</p>
       </div>
   </div>
-  <!---
-  <div class="container">
-    <div class="video">
-      <video autoplay loop muted width="100%">
-        <source src="vid.mp4" type="video/mp4" /></video>
-        <div class="ed">Educational Journey</div>
-    </div>
-  </div>
-  -->
+
   <section class="banner embed-responsive-item">
-    <video class="hidden-sm-down" autoplay="" loop="">
+    <video class="bg-video" autoplay="" loop="">
         <source src="vid.mp4" type="video/mp4">
     </video>
     <h2 class="float-right">Educational Journey</h2><br> 
-  </section>
+</section>
+<!--- card template
+<div class="card text-center">
+  <div class="card-header">
+    <h4 class="card-title">Welcome to the Matrix</h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text">You have been chosen to join the resistance against the machines.</p>
+  </div>
+  <div class="card-footer text-muted">
+    <a href="#" class="btn btn-primary">Join the resistance</a>
+  </div>
+</div>
+
+-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="image1.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Card 1</h4>
+          <p class="card-text">Some text about card 1</p>
+          <a href="#" class="btn btn-primary">More Info</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="image2.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Card 2</h4>
+          <p class="card-text">Some text about card 2</p>
+          <a href="#" class="btn btn-primary">More Info</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="image3.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">Card 3</h4>
+          <p class="card-text">Some text about card 3</p>
+          <a href="#" class="btn btn-primary">More Info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>Copyright ©2022 Your Company</p>
+    </div>
+    <div class="footer-center">
+      <p>Contact Us</p>
+      <ul>
+        <li>Email: contact@yourcompany.com</li>
+        <li>Phone: 555-555-5555</li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<!---
   <footer>
     <div class="box">
       <nav class="social">
@@ -99,7 +164,7 @@
       <h4 id="footer2">All Rights Reserved @2023</h4>
     </div>
   </footer>
-
+-->
   <script src="animation.js"></script>
 </body>
 </html>
