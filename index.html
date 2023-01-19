@@ -17,17 +17,18 @@
 <body>
 
   <div class="navbar">
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
     <div class="line"></div>
-    <a href="#">About</a>
+    <a href="#about">About</a>
     <div class="line"></div>
-    <a href="#">Skills</a>
+    <a href="#skills">Skills</a>
     <div class="line"></div>
     <a href="project.html" target="_blank">Projects</a>
     <div class="line"></div>
     <a href="#">Accomplishments</a>
     <div class="line"></div>
-    <a href="#">Contact</a>
+    <div class="contact"></div>
+    <a href="#contact">Contact</a>
     <div class="menu-btn" onclick="toggleMenu()">
       <i class="fa fa-bars"></i>
     </div>
@@ -50,7 +51,7 @@
   </div>
 </div>
 -->
-  <div class="container">
+  <div class="container" id="home">
       <div class="row">
         <div class="col">
           <img id="image" class="mx-auto d-block" src="https://img.freepik.com/free-vector/programmers-day-banner-design_1308-113288.jpg?w=996&t=st=1673579338~exp=1673579938~hmac=c0f2c080a5b6b11d4554d9dd34e24d484e4ec48eef7c879f6d0a09096d9bc708" class="rounded-circle">  
@@ -65,11 +66,7 @@
       </div>
   </div>
 <!---video education Section-->
-  <div class="video-section">
-    <video id="bg-video" autoplay="" loop="">
-      <source src="vid.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
+  <div class="about" id="about">
       <h1>WHOAMI</h1>
       <p>A student, like any other, attends college to obtain a degree and then a job. But there is another side to me.
         Hello there! My name is Rahul, and I am an Indian student who came to America to pursue a dream. My father's dream was to visit the United States of America, but he was unable to do so, so I came here to make him proud.
@@ -77,17 +74,12 @@
         I am taking psychology classes to learn about the working of the brain so I can apply psychological knowledge in real life and prevent NYC from cybercrime.
         Currently, I am also enrolled in AWS cloud solution architect certification course offered by Queensborough Community College,  
         Cybersecurity course offered by Codepath.org </p>
-    </div>
+    
   </div>
 
 <!--skills card section -->
-<div class="card1 text-center">
-  <div class="card-header">
-    <h4 class="card1-title">Welcome to my Skills page</h4>
-  </div>
-  <div class="card-body">
-    <p class="card-text">You have been chosen to join the resistance against the machines.</p>
-  </div>
+<div class="card1 text-center" id="skills">
+  <p>Skills Developed in 3 years</p>
 </div>
 
 <section class="container">
@@ -160,10 +152,34 @@
     </div>
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="image3.jpg" alt="Card image">
+        <img class="card-img-top" src="apple.png" alt="Apple logo">
         <div class="card-body">
-          <h4 class="card-title">Card 3</h4>
-          <p class="card-text">Some text about card 3</p>
+          <h4 class="card-title">Windows</h4>
+          <p class="card-text">
+            <ul>
+              <li>macOS and ipad OS troubleshooting</li>
+              <li>Reset/reimage </li>
+              <li>Software Troubleshooting</li>
+    
+            </ul>
+          </p>
+          <a href="#" class="btn btn-primary">More Info</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="windows.png" alt="Windows logo">
+        <div class="card-body">
+          <h4 class="card-title">AWS</h4>
+          <p class="card-text">
+            <ul>
+              <li>Windows Troubleshooting</li>
+              <li>Windows Reinstallation/Reimage</li>
+              <li>Deep understanding</li>
+    
+            </ul>
+          </p>
           <a href="#" class="btn btn-primary">More Info</a>
         </div>
       </div>
@@ -171,8 +187,31 @@
   </div>
 </section>
 
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="windows.png" style="width:100%">
+  </div>
 
-<section class="content-banner" style="background-image: url('/images/supportbanner.png')">
+  <div class="mySlides">
+    <img src="wireshark.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="apple.png" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+<section class="content-banner" style="background-image: url('/images/supportbanner.png')" id="contact">
   <div class="container-xxl-3 mt-0 border border-success border-5 text-white bg-dark">
     <h1 style="text-align:center;">Ways to Contact Me</h1>
     <section class="content contact-us">
@@ -233,5 +272,6 @@
 
   <script src="animation.js"></script>
   <script src="menu.js"></script>
+  <script src="slideshow.js"></script>
 </body>
 </html>

@@ -233,9 +233,9 @@ h2{
 
 .footer a:hover {
   color: #fff; /* change text color on hover */
-}
+} 
 
-/* Media Queries */
+
 @media (max-width: 768px) {
   .footer-container {
     flex-wrap: wrap;
@@ -244,6 +244,8 @@ h2{
     width: 100%;
   }
 }
+
+/* --------- Navigation button layout and responsive layout ----*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -281,23 +283,18 @@ h2{
   background: #f0f0f0;
 }
 @media (max-width: 600px) {
-  /* Change link display to block for mobile view */
   .navbar a {
     display: block;
-    margin: 10px 0;
+    margin: 4px 0;
     font-size: 15px;
     padding: 6px;
     text-decoration: none;
   }
-
-  /* Show hamburger menu button */
   .navbar .menu-btn {
     display: block;
     font-size: 30px;
     cursor: pointer;
   }
-
-  /* Hide links by default */
   .navbar .links {
     text-decoration: none;
     display: none;
@@ -311,22 +308,27 @@ h2{
     background: #f0f0f0;
   }
 }
-.skillset{
-  background-color: black;
-  width: 100%;
-}
-.card1{
-  color: red;
-}
-.card1-title{
+
+
+/*---- End of the Navigation Button Layout -----*/
+
+.card1 p{
   color: red;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-top: 150px;
+  margin-left: 400px;
+  border-radius: 20px;
+  box-shadow: 10px 5px 3px 4px yellow;
+  background-color: black;
+  line-height: 60px;
+  font-size: 30px;
+  width: 450px;
 }
 .card {
   display: flexbox;
   color: black; 
   font-family: monospace;
-  top: 20px;
+  top: 60px;
   box-shadow: 2px 0px 20px 2px #e82107;
   border-radius: 10px;
 }
@@ -369,48 +371,25 @@ h2{
 }
 
 /*Video Section*/
-.video-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  }
-  
-  #bg-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-  
-  .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-  padding: 20px;
+.about h1{
+  font-family: monospace;
+  letter-spacing: 8px;
   text-align: center;
-  }
-  
-  .overlay h1{
-    font-family: monospace;
-    letter-spacing: 8px;
-    text-align: center;
-    color: rgb(11, 208, 242);
-    font-weight: 800;
-    margin-top: 40px;
-    border-color: green;
-    border-radius: 10px;
-    box-shadow: 5px 10px 50px 0px #e4ede4;
-  }
+  color: rgb(11, 208, 242);
+  width: 350px;
+  margin-left: 450px;
+  margin-top: 60px;
+  font-weight: 800px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 50px 0px #031003;
+}
 
-  .overlay p{
-    text-align: center;
-    color: rgb(0, 255, 76);
-    margin-top: 50px;
-    font-size: 25px;
-  }
+.about p{
+  text-align: center;
+  color: rgb(243, 83, 15);
+  margin: 40px;
+  font-size: 25px;
+}
   
   @media (max-width: 768px) {
   .overlay {
@@ -500,18 +479,30 @@ h2{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black; /* semi-transparent black */
-  color: orange;
+  background-color: rgb(15, 14, 14); /* semi-transparent black */
+  color: rgb(10, 182, 195);
   padding: 20px;
   text-align: center;
 }
 
 .features_area .main_title p {
   font-size: 30px;
-  margin-left: 20px;
-  box-shadow: 3px 6px 012px 10px rgb(90, 248, 5);
-  background-color: black;
+  width: 300px;
+  margin: auto;
+  box-shadow: 1px 3px 10px 10px rgb(120, 118, 118);
+  background-color: white;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 1px 1.5px#176efa;
   padding: 10px 6px 10px 8px;
+}
+.features_area .main_title .cap{
+  font-size: 15px;
+  margin: auto;
+  color: crimson;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px 6px 10px 8px;
+
 }
 .feature_item {
   margin-top: 60px;
@@ -529,11 +520,12 @@ h2{
   .feature_item h4 {
     font-size: 20px;
     margin-bottom: 20px;
+    color: Orange;
     text-transform: uppercase; }
   .feature_item p {
     margin-bottom: 0px; }
   .feature_item:hover {
-    box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+    box-shadow: 5px 0px 15px 20px orange;
     background: #fff; }
 
     .feature_item img{
