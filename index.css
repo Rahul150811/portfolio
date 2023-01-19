@@ -326,6 +326,7 @@ h2{
 }
 .card {
   display: flexbox;
+  margin: 15px;
   color: black; 
   font-family: monospace;
   top: 60px;
