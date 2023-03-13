@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Youtube Video Downloader</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="index.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  
-  <body>
-    <h1>YouTube Video Downloader</h1>
-    <form action="download.php" method="post">
-      <label for="video_url">Enter YouTube Video URL:</label>
-      <input type="text" name="video_url" id="video_url" required>
-      <br>
-      <input type="submit" value="Download">
-    </form>
+<html>
+<head>
+	<title>YouTube Video Downloader</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<h1>YouTube Video Downloader</h1>
+	<form>
+		<label for="video_url">Enter YouTube Video URL:</label>
+		<input type="text" name="video_url" id="video_url" required>
+		<br>
+		<button type="button" onclick="downloadVideo()">Download</button>
+	</form>
 
-    <script src="fetch.js"></script>
+	<div id="result"></div>
 
-  </body>
+	<script>
+		function downloadVideo() {
+			var video_url = document.getElementById("video_url").value;
+			var url = "https://example.com/download.php?video_url=" + encodeURIComponent(video_url);
+
+			$.get(url, function(data, status){
+				$("#result").html(data);
+			});
+		}
+	</script>
+</body>
 </html>
