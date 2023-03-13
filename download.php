@@ -1,42 +1,53 @@
 <?php
-// Set the video ID
-$video_id = "YOUR_VIDEO_ID_HERE";
 
-// Set the API key
-$api_key = "AIzaSyD3brMXXIj0FfBTNNxlA0FSivejVTZ171w";
+$video_id = 'VIDEO_ID_HERE'; // Replace VIDEO_ID_HERE with the YouTube video ID
+$download_url = 'https://www.youtube.com/watch?v=' . $video_id;
 
-// Set the endpoint URL
-$url = "https://www.googleapis.com/youtube/v3/videos?id=".$video_id."&key=".$api_key."&part=snippet";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $download_url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, 1);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+$response = curl_exec($ch);
+curl_close($ch);
 
-// Get the video information using cURL
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-$response = curl_exec($curl);
-curl_close($curl);
+if(preg_match('/[a-zA-Z0-9_-]{11}/', $download_url, $matches)) {
+    $video_id = $matches[0];
+}
+$download_link = 'https://www.youtube.com/get_video_info?video_id='.$video_id.'&el=detailpage&ps=default&eurl=&gl=US&hl=en';
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $download_link);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$response = curl_exec($ch);
+curl_close($ch);
 
-// Parse the JSON response
-$data = json_decode($response, true);
+parse_str($response, $data);
+$streams = $data['url_encoded_fmt_stream_map'];
+$streams = explode(',',$streams);
 
-// Get the video title and URL
-$title = $data["items"][0]["snippet"]["title"];
-$url = "https://www.youtube.com/watch?v=".$video_id;
+foreach ($streams as $stream) {
+    parse_str($stream, $stream_data);
+    $url = urldecode($stream_data['url']);
+    $type = explode(';', $stream_data['type']);
+    $type = $type[0];
+    $ext = str_replace('video/','',$type);
+    $title = $data['title'].'.'.$ext;
+    $title = str_replace(' ','_',$title);
 
-// Set the download headers
-header("Content-Type: video/mp4");
-header("Content-Disposition: attachment; filename=".$title.".mp4");
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    $response = curl_exec($ch);
+    curl_close($ch);
 
-// Download the video using cURL
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($curl, CURLOPT_HEADER, 0);
-curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
-curl_setopt($curl, CURLOPT_TIMEOUT, 600);
-$data = curl_exec($curl);
-curl_close($curl);
+    $file = fopen($title, 'w');
+    fwrite($file, $response);
+    fclose($file);
+}
 
-// Output the video data
-echo $data;
+echo 'Video Downloaded Successfully!';
+
 ?>

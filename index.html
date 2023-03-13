@@ -13,10 +13,11 @@
   
   <body>
     <h1>YouTube Video Downloader</h1>
-    <form method="post" action="download.php">
-      <label for="video-url">Video URL:</label>
-      <input type="text" id="video-url" name="video-url" placeholder="Enter YouTube video URL" required>
-      <button type="submit">Download</button>
+    <form action="download.php" method="post">
+      <label for="video_url">Enter YouTube Video URL:</label>
+      <input type="text" name="video_url" id="video_url" required>
+      <br>
+      <input type="submit" value="Download">
     </form>
 
     <script src="fetch.js"></script>
